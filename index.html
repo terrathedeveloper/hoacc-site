@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      .container {
+        height: 100vh;
+        width: 100%;
+        background-color: #99dbff;
+      }
+      .row {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .col-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right: 100px;
+        opacity: 0.9;
+      }
+      .col-right:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+      .fade-in-door {
+        animation: fadeIn 5s;
+        opacity: 0;
+
+        animation-fill-mode: forwards;
+      }
+
+      .fade-in-door:hover {
+        opacity: 0.8;
+      }
+
+      .fade-in-text {
+        animation: fadeIn 5s;
+        opacity: 0;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .typewriter{
+        text-align: center;
+      }
+      .typewriter h3 {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0.15em; /* Adjust as needed */
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+      }
+
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: orange;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-left fade-in-text">
+          <div><img src="assets/img/hoacc-text.png" alt="" srcset="" /></div>
+          <div>
+            <img src="assets/img/geekculture-text.png" alt="" srcset="" />
+          </div>
+        </div>
+        <div class="col-right">
+          <a href="main.html"
+            ><img
+              class="fade-in-door"
+              src="assets/img/door.png"
+              alt=""
+              srcset=""
+          /></a>
+          <div class="typewriter"><h3>You May Enter</h3></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
