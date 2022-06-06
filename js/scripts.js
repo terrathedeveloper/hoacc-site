@@ -52,3 +52,9 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+document.querySelector('#contactForm').addEventListener('submit', event=>{
+    event.preventDefault();
+    console.log('TOOOOOOO')
+})
